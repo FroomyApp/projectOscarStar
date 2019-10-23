@@ -3,8 +3,22 @@
 Create, read, update, delete in a Node.js app with an Express server and Postgres database.
 
 ## How to Run
-```cd /Users/_username_/Desktop/Development/fsocietyxxx/api```
-``` node index.js```
+Change to the directory you store the files within inside Terminal
+
+```
+cd /Users/_username_/Desktop/Development/fsocietyxxx/api
+```
+
+then execute
+
+```
+node index.js
+```
+
+and you should see a return of
+```
+App running on port 3000.
+```
 
 ## Database
 
