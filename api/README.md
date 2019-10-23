@@ -2,6 +2,10 @@
 
 Create, read, update, delete in a Node.js app with an Express server and Postgres database.
 
+## How to Run
+```cd /Users/_username_/Desktop/Development/fsocietyxxx/api```
+``` node index.js```
+
 ## Database
 
 ```bash
