@@ -2,8 +2,6 @@
 
 Create, read, update, delete in a Node.js app with an Express server and Postgres database.
 
-### [Read the tutorial](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/)
-
 ## Database
 
 ```bash
@@ -52,7 +50,7 @@ node index.js
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
+- [Tyler Phillips](https://www.tylercodes.co)
 
 ## License
 
