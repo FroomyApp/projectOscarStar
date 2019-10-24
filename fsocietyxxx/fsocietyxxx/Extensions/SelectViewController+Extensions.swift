@@ -66,14 +66,14 @@ extension SelectViewController {
         let cells = details[indexPath.row]
         if cells.cellType == .small {
             guard let optionCell = collectionView.dequeueReusableCell(withReuseIdentifier: optionCellID, for: indexPath) as? OptionCell else {
-                print("text cell could not be dequeued")
+                print("cell could not be dequeued")
                 return OptionCell()
             }
             optionCell.details = details[indexPath.row]
             return optionCell
         } else {
             guard let listCell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellID, for: indexPath) as? ListCell else {
-                print("text cell could not be dequeued")
+                print("cell could not be dequeued")
                 return ListCell()
             }
             listCell.details = details[indexPath.row]

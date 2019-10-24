@@ -28,18 +28,15 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
         view.backgroundColor = UIColor.systemBackground
         
         setupCollectionView()
-//        setupContentView()
         setNavigationBarProperties()
         createInterestsArray()
         
         self.view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        collectionView.heightAnchor.constraint(equalToConstant: view.frame.height / 2).isActive = true
-        
     }
     
     func setNavigationBarProperties() {
-        navigationItem.title = "Welcome!"
+        navigationItem.title = "Goal Keeper"
         let leftBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
         self.navigationItem.leftBarButtonItem = leftBarButton
         
@@ -53,24 +50,6 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     
     @objc func addTapped() {
         
-    }
-    
-    func setupContentView() {
-        self.view.addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collectionView.heightAnchor.constraint(equalToConstant: view.frame.height / 2).isActive = true
-        
-        self.view.addSubview(contentView)
-        contentView.backgroundColor = UIColor.secondarySystemBackground
-        contentView.layer.cornerRadius = 15
-//        contentView.layer.borderColor = UIColor.clear.cgColor
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-//        contentView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10).isActive = true
-        contentView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 110).isActive = true
-        contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        contentView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
-        contentView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
-        contentView.heightAnchor.constraint(equalToConstant: view.frame.width / 1.5).isActive = true
     }
         
     public func createInterestsArray() {
