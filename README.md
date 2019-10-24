@@ -1,4 +1,4 @@
-# fsocietyxxx
+# projectOscarStar
 
 Create, read, update, delete in a Node.js app with an Express server and Postgres database.
 
@@ -6,7 +6,7 @@ Create, read, update, delete in a Node.js app with an Express server and Postgre
 Change to the directory you store the files within inside Terminal
 
 ```
-cd /Users/_username_/Desktop/Development/fsocietyxxx/api
+cd /Users/_username_/Desktop/Development/projectOscarStar/api
 ```
 
 then execute
@@ -53,8 +53,8 @@ INSERT INTO users (name, email)
 ## Installation
 
 ```bash
-git clone git@github.com:taniarascia/node-api-postgres
-cd node-api-postgres
+git clone git@github.com:FroomyApp/projectOscarStar.git
+cd projectOscarStar
 npm install
 node index.js
 ```
