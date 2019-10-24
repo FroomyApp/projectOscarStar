@@ -11,13 +11,26 @@ import UIKit
 
 class MainTableViewController: UITableViewController, UINavigationBarDelegate {
     
+    /// The search controller for your To-Do's.
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var tableViewTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = tableViewTitle
+        setupSearchController()
         
     }
+    
+    /// Sets up the search controller.
+     func setupSearchController() {
+//         searchController.searchResultsUpdater = self
+         searchController.obscuresBackgroundDuringPresentation = false
+         searchController.searchBar.placeholder = "Search Matches"
+         navigationItem.searchController = searchController
+         definesPresentationContext = true
+     }
     
 }
