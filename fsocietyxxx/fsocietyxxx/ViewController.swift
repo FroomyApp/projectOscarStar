@@ -10,11 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let emailTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    let passwordTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+     }()
+    
+    let continueButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupObjectConstraints()
+        
     }
 
-
+    func setupObjectConstraints() {
+        
+    }
+    
+    @objc func enableContinue() {
+        
+    }
+    
 }
 
