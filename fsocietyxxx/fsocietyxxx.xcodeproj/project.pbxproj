@@ -14,6 +14,7 @@
 		7FD805FD235FA73600DAEB9F /* fsocietyxxx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FD805FB235FA73600DAEB9F /* fsocietyxxx.xcdatamodeld */; };
 		7FD805FF235FA73700DAEB9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD805FE235FA73700DAEB9F /* Assets.xcassets */; };
 		7FD80602235FA73700DAEB9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD80600235FA73700DAEB9F /* LaunchScreen.storyboard */; };
+		7FD8060A235FAFF200DAEB9F /* MainTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD80609235FAFF200DAEB9F /* MainTableView.storyboard */; };
 		7FD8060C235FB00B00DAEB9F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8060B235FB00B00DAEB9F /* MainTableViewController.swift */; };
 		BCB985DA31DF555414B28EDD /* Pods_fsocietyxxx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4995C4740417BF321E1A22 /* Pods_fsocietyxxx.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		7FD805FE235FA73700DAEB9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FD80601235FA73700DAEB9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FD80603235FA73700DAEB9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD80609235FAFF200DAEB9F /* MainTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTableView.storyboard; sourceTree = "<group>"; };
 		7FD8060B235FB00B00DAEB9F /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				7FD805F4235FA73600DAEB9F /* SceneDelegate.swift */,
 				7FD805F6235FA73600DAEB9F /* ViewController.swift */,
 				7FD8060B235FB00B00DAEB9F /* MainTableViewController.swift */,
+				7FD80609235FAFF200DAEB9F /* MainTableView.storyboard */,
 				7FD805F8235FA73600DAEB9F /* Main.storyboard */,
 				7FD805FE235FA73700DAEB9F /* Assets.xcassets */,
 				7FD80600235FA73700DAEB9F /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				7FD80602235FA73700DAEB9F /* LaunchScreen.storyboard in Resources */,
 				7FD805FF235FA73700DAEB9F /* Assets.xcassets in Resources */,
 				7FD805FA235FA73600DAEB9F /* Main.storyboard in Resources */,
+				7FD8060A235FAFF200DAEB9F /* MainTableView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
