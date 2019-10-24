@@ -1,4 +1,4 @@
-# fsocietyxxx API
+# fsocietyxxx
 
 Create, read, update, delete in a Node.js app with an Express server and Postgres database.
 
