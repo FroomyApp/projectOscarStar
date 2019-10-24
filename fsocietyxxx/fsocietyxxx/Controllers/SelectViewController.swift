@@ -57,6 +57,9 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
         details.append(CellDetails(detailName: "View short term goals", detailMessage: "Your short to-do items", cellType: .small))
         details.append(CellDetails(detailName: "View long term goals", detailMessage: "Your long term to-do items", cellType: .small))
         details.append(CellDetails(detailName: "", detailMessage: "", cellType: .big))
+        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
+        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
+        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
     }
     
 }

@@ -28,7 +28,7 @@ class MainTableViewController: UITableViewController, UINavigationBarDelegate {
      func setupSearchController() {
 //         searchController.searchResultsUpdater = self
          searchController.obscuresBackgroundDuringPresentation = false
-         searchController.searchBar.placeholder = "Search Matches"
+        searchController.searchBar.placeholder = "Search \(tableViewTitle)..."
          navigationItem.searchController = searchController
          definesPresentationContext = true
      }

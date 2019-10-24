@@ -18,10 +18,11 @@
 		7F3D452C2361FECD005E29A6 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D452B2361FECD005E29A6 /* SelectViewController.swift */; };
 		7F3D452E236200F1005E29A6 /* SelectViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D452D236200F1005E29A6 /* SelectViewController+Extensions.swift */; };
 		7F3D4534236201CE005E29A6 /* SelectViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D4533236201CE005E29A6 /* SelectViewControllerCell.swift */; };
+		7F8E7CAF23623B3B00074EFE /* SlidingCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E7CAE23623B3B00074EFE /* SlidingCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F1BB4812361E0650091CBF3 /* fsocietyxxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fsocietyxxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1BB4812361E0650091CBF3 /* projectOscarStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectOscarStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1BB4842361E0650091CBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1BB4862361E0650091CBF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7F1BB4882361E0650091CBF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		7F3D452B2361FECD005E29A6 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		7F3D452D236200F1005E29A6 /* SelectViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectViewController+Extensions.swift"; sourceTree = "<group>"; };
 		7F3D4533236201CE005E29A6 /* SelectViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewControllerCell.swift; sourceTree = "<group>"; };
+		7F8E7CAE23623B3B00074EFE /* SlidingCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,7 @@
 		7F1BB4822361E0650091CBF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F1BB4812361E0650091CBF3 /* fsocietyxxx.app */,
+				7F1BB4812361E0650091CBF3 /* projectOscarStar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				7F3D4533236201CE005E29A6 /* SelectViewControllerCell.swift */,
+				7F8E7CAE23623B3B00074EFE /* SlidingCells.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -131,7 +134,7 @@
 			);
 			name = fsocietyxxx;
 			productName = fsocietyxxx;
-			productReference = 7F1BB4812361E0650091CBF3 /* fsocietyxxx.app */;
+			productReference = 7F1BB4812361E0650091CBF3 /* projectOscarStar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,6 +191,7 @@
 				7F3D4534236201CE005E29A6 /* SelectViewControllerCell.swift in Sources */,
 				7F1BB4892361E0650091CBF3 /* ViewController.swift in Sources */,
 				7F1BB4852361E0650091CBF3 /* AppDelegate.swift in Sources */,
+				7F8E7CAF23623B3B00074EFE /* SlidingCells.swift in Sources */,
 				7F3D452E236200F1005E29A6 /* SelectViewController+Extensions.swift in Sources */,
 				7F1BB48F2361E0650091CBF3 /* fsocietyxxx.xcdatamodeld in Sources */,
 				7F3D452A2361FCC5005E29A6 /* MainTableViewController.swift in Sources */,
@@ -343,8 +347,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.fsocietyxxx;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.projectOscarStar;
+				PRODUCT_NAME = projectOscarStar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,8 +365,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.fsocietyxxx;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.projectOscarStar;
+				PRODUCT_NAME = projectOscarStar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

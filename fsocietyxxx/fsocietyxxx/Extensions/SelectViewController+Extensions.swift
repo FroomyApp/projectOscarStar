@@ -88,7 +88,7 @@ extension SelectViewController {
         if cells.cellType == .small {
             return CGSize(width: view.frame.width - 16 - 16, height: 85)
         } else {
-            return CGSize(width: view.frame.width - 16 - 16, height: 400)
+            return CGSize(width: view.frame.width - 16 - 16, height: 180)
         }
     }
     
