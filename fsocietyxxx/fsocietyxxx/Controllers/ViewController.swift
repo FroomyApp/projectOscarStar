@@ -10,15 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     let emailTextField: UITextField = {
         let textField = UITextField()
+        textField.backgroundColor = UIColor.secondarySystemBackground
+        textField.placeholder = " Your email..."
+        textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
     let passwordTextField: UITextField = {
         let textField = UITextField()
+        textField.backgroundColor = UIColor.secondarySystemBackground
+        textField.placeholder = " Your password..."
+        textField.isSecureTextEntry = true
+        textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
      }()
@@ -42,6 +48,19 @@ class ViewController: UIViewController {
     }
 
     func setupObjectConstraints() {
+        
+        view.addSubview(emailTextField)
+        emailTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 230).isActive = true
+        emailTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+        emailTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
+        emailTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        
+        view.addSubview(passwordTextField)
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15).isActive = true
+        passwordTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+        passwordTextField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        
         view.addSubview(continueButton)
         continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         continueButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

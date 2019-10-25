@@ -88,7 +88,7 @@ extension SelectViewController {
         if cells.cellType == .small {
             return CGSize(width: view.frame.width - 16 - 16, height: 85)
         } else {
-            return CGSize(width: view.frame.width - 16 - 16, height: 180)
+            return CGSize(width: view.frame.width - 16 - 16, height: 325)
         }
     }
     
@@ -99,14 +99,14 @@ extension SelectViewController {
        switch item.detailName {
         case "Create new...":
             print("Create new tapped")
-        case "View short term goals":
+        case "View your existing KeepDates":
             let tableController = MainTableViewController()
-            tableController.tableViewTitle = "Short term goals"
+            tableController.tableViewTitle = "KeepDates"
             let navigationController = UINavigationController(rootViewController: tableController)
             show(navigationController, sender: self)
-        case "View long term goals":
+        case "View your Saving List":
             let tableController = MainTableViewController()
-            tableController.tableViewTitle = "Long term goals"
+            tableController.tableViewTitle = "Saving List"
             let navigationController = UINavigationController(rootViewController: tableController)
             show(navigationController, sender: self)
         default:

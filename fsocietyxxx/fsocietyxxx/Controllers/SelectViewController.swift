@@ -36,9 +36,7 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func setNavigationBarProperties() {
-        navigationItem.title = "Goal Keeper"
-        let leftBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
-        self.navigationItem.leftBarButtonItem = leftBarButton
+        navigationItem.title = "KeepDate"
         
         let rightBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         self.navigationItem.rightBarButtonItem = rightBarButton
@@ -53,13 +51,10 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     }
         
     public func createInterestsArray() {
-        details.append(CellDetails(detailName: "Create new...", detailMessage: "Create a new to-do item...", cellType: .small))
-        details.append(CellDetails(detailName: "View short term goals", detailMessage: "Your short to-do items", cellType: .small))
-        details.append(CellDetails(detailName: "View long term goals", detailMessage: "Your long term to-do items", cellType: .small))
-        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .big))
-        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
-        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
-        details.append(CellDetails(detailName: "", detailMessage: "", cellType: .small))
+        details.append(CellDetails(detailName: "Next KeepDate", cellType: .big))
+        details.append(CellDetails(detailName: "View your existing KeepDates", cellType: .small))
+        details.append(CellDetails(detailName: "View your Saving List", cellType: .small))
     }
     
+    //Add "Upcoming Dates" to big cell, with the sliding cell being stores.
 }

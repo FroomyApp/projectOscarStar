@@ -20,8 +20,7 @@ class MainTableViewController: UITableViewController, UINavigationBarDelegate {
         super.viewDidLoad()
         
         navigationItem.title = tableViewTitle
-        setupSearchController()
-        
+        setupSearchController()      
     }
     
     /// Sets up the search controller.

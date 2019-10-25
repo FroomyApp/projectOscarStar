@@ -12,9 +12,7 @@ import UIKit
 struct CellDetails {
     
     var detailName: String?
-    
-    var detailMessage: String?
-    
+        
     var cellType: CellType
 }
 
@@ -88,12 +86,28 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     /// Text view that displays the name of the details being shown in the cell.
     var listTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    //CollectionView that stores the NoteContent Cell(i.e. Notes themselves)
+    var ideasTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Here's some ideas:"
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    var upcomingKeepDateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "October 31st: Anniversary"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    //CollectionView that stores the StoreContent Cell
     var bigCellCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -121,29 +135,40 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     private func sharedInit() {
         
-        addSubview(listTitleLabel)
-        listTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        listTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
     func setupViews() {
         backgroundColor = .clear
-
+        
+        addSubview(listTitleLabel)
         addSubview(bigCellCollectionView)
-
+        addSubview(upcomingKeepDateLabel)
+        addSubview(ideasTitleLabel)
         
         bigCellCollectionView.delegate = self
         bigCellCollectionView.dataSource = self
         
         bigCellCollectionView.register(SlidingCells.self, forCellWithReuseIdentifier: slidingCellID)
         
-        //NotesCollectionView left constraints
+        //bigCellCollectionView left constraints
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": bigCellCollectionView]))
         
+        //listTitleLabel left and right constraints
+        // -14-[v0] means 14 px from left of View
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": listTitleLabel]))
+        
+        //upcomingKeepDateLabel left and right constraints
+        // -14-[v0] means 14 px from left of View
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": upcomingKeepDateLabel]))
+        
+        //ideasTitleLabel left and right constraints
+        // -14-[v0] means 14 px from left of View
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": ideasTitleLabel]))
+        
         //All views vertical constraints
-        //Reads from left to right, sectionTitleLabel is above NotesCollectionView, NotesCollectionView is above DividerLineView
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil,
-                                                      views: ["v0": bigCellCollectionView]))
+        //Reads from left to right, listTitleLabel is above upcomingKeepDateLabel, upcomingKeepDateLabel is above ideasTitleLabel, ideasTitleLabel is above bigCellCollectionView
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[sectionTitleLabel(30)]-10-[v1]-30-[v2][v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil,
+                                                      views: ["v0": bigCellCollectionView, "v1": upcomingKeepDateLabel, "v2": ideasTitleLabel, "sectionTitleLabel": listTitleLabel]))
     }
     
     //Returns 7 *notes*
@@ -162,12 +187,12 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         
     }
     
-    //NoteContentCell Frame(width/height, - 33 so that way the grayView doesn't get overlapped by the SectionTitleLabel)
+    //SlidingCells Frame(width/height, - 33 so that way the grayView doesn't get overlapped by the listTitleLabel)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: frame.height - 33)
+        return CGSize(width: 150, height: 150)
     }
     
-    //Returns 14px from left, and 14px from right for NoteContentCell(right takes place after a scroll to the right)
+    //Returns 14px from left, and 14px from right for SlidingCells(right takes place after a scroll to the right)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
     }
