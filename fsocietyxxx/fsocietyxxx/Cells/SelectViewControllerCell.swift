@@ -9,28 +9,6 @@
 import Foundation
 import UIKit
 
-struct CellDetails {
-    
-    var detailName: String?
-        
-    var cellType: CellType
-}
-
-enum CellType: String, Codable {
-    
-    /// Post contains only text.
-    case small
-    
-    /// Post contains only video.
-    case big
-    
-    /// Returns the the post type in String form.
-    var name: String {
-        return rawValue
-    }
-    
-}
-
 class OptionCell: UICollectionViewCell {
     
     let padding: CGFloat = 16
@@ -74,12 +52,12 @@ class OptionCell: UICollectionViewCell {
 class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private let slidingCellID = "slidingCellID"
-    
-    let padding: CGFloat = 16
-    
+        
     var details: CellDetails? {
         didSet {
             listTitleLabel.text = details?.detailName
+            ideasTitleLabel.text = "Here's some ideas:"
+            upcomingKeepDateLabel.text = "October 31st: Anniversary"
         }
     }
     
@@ -93,7 +71,6 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     var ideasTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Here's some ideas:"
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -101,7 +78,6 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     var upcomingKeepDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "October 31st: Anniversary"
         label.font = UIFont.systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -118,59 +94,44 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         return collectionView
     }()
     
-    ///Defines the width of the entire cell.
-    var widthConstraint: NSLayoutConstraint?
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         sharedInit()
-        setupViews()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         sharedInit()
-        setupViews()
     }
-    
+
     private func sharedInit() {
-        
-    }
-    
-    func setupViews() {
         backgroundColor = .clear
-        
+           
         addSubview(listTitleLabel)
         addSubview(bigCellCollectionView)
         addSubview(upcomingKeepDateLabel)
         addSubview(ideasTitleLabel)
-        
+       
         bigCellCollectionView.delegate = self
         bigCellCollectionView.dataSource = self
-        
+       
         bigCellCollectionView.register(SlidingCells.self, forCellWithReuseIdentifier: slidingCellID)
-        
+       
         //bigCellCollectionView left constraints
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": bigCellCollectionView]))
-        
-        //listTitleLabel left and right constraints
+       
+        //left and right constraints
         // -14-[v0] means 14 px from left of View
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": listTitleLabel]))
-        
-        //upcomingKeepDateLabel left and right constraints
-        // -14-[v0] means 14 px from left of View
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": upcomingKeepDateLabel]))
-        
-        //ideasTitleLabel left and right constraints
-        // -14-[v0] means 14 px from left of View
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": ideasTitleLabel]))
-        
+       
         //All views vertical constraints
         //Reads from left to right, listTitleLabel is above upcomingKeepDateLabel, upcomingKeepDateLabel is above ideasTitleLabel, ideasTitleLabel is above bigCellCollectionView
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[sectionTitleLabel(30)]-10-[v1]-30-[v2][v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil,
-                                                      views: ["v0": bigCellCollectionView, "v1": upcomingKeepDateLabel, "v2": ideasTitleLabel, "sectionTitleLabel": listTitleLabel]))
+                                                     views: ["v0": bigCellCollectionView, "v1": upcomingKeepDateLabel, "v2": ideasTitleLabel, "sectionTitleLabel": listTitleLabel]))
     }
-    
+
     //Returns 7 *notes*
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
@@ -187,7 +148,6 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         
     }
     
-    //SlidingCells Frame(width/height, - 33 so that way the grayView doesn't get overlapped by the listTitleLabel)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 150)
     }
@@ -198,4 +158,3 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     }
 
 }
-

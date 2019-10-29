@@ -18,11 +18,17 @@
 		7F3D452C2361FECD005E29A6 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D452B2361FECD005E29A6 /* SelectViewController.swift */; };
 		7F3D452E236200F1005E29A6 /* SelectViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D452D236200F1005E29A6 /* SelectViewController+Extensions.swift */; };
 		7F3D4534236201CE005E29A6 /* SelectViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D4533236201CE005E29A6 /* SelectViewControllerCell.swift */; };
+		7F6014232367913D000351C8 /* AddKeepDateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6014222367913D000351C8 /* AddKeepDateController.swift */; };
+		7F6014252367916A000351C8 /* AddASignificantOtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6014242367916A000351C8 /* AddASignificantOtherController.swift */; };
+		7F60142723688E0D000351C8 /* SignificantOtherProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F60142623688E0D000351C8 /* SignificantOtherProfileController.swift */; };
+		7F60142A236894E8000351C8 /* MainViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F601429236894E8000351C8 /* MainViewCellDetails.swift */; };
+		7F60142D23689602000351C8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F60142C23689602000351C8 /* TabBarController.swift */; };
+		7F601431236897BB000351C8 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F601430236897BB000351C8 /* SettingsController.swift */; };
 		7F8E7CAF23623B3B00074EFE /* SlidingCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E7CAE23623B3B00074EFE /* SlidingCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F1BB4812361E0650091CBF3 /* projectOscarStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectOscarStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1BB4812361E0650091CBF3 /* KeepDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1BB4842361E0650091CBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F1BB4862361E0650091CBF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7F1BB4882361E0650091CBF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,12 @@
 		7F3D452B2361FECD005E29A6 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		7F3D452D236200F1005E29A6 /* SelectViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectViewController+Extensions.swift"; sourceTree = "<group>"; };
 		7F3D4533236201CE005E29A6 /* SelectViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewControllerCell.swift; sourceTree = "<group>"; };
+		7F6014222367913D000351C8 /* AddKeepDateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeepDateController.swift; sourceTree = "<group>"; };
+		7F6014242367916A000351C8 /* AddASignificantOtherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddASignificantOtherController.swift; sourceTree = "<group>"; };
+		7F60142623688E0D000351C8 /* SignificantOtherProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignificantOtherProfileController.swift; sourceTree = "<group>"; };
+		7F601429236894E8000351C8 /* MainViewCellDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCellDetails.swift; sourceTree = "<group>"; };
+		7F60142C23689602000351C8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7F601430236897BB000351C8 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		7F8E7CAE23623B3B00074EFE /* SlidingCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +72,7 @@
 		7F1BB4822361E0650091CBF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F1BB4812361E0650091CBF3 /* projectOscarStar.app */,
+				7F1BB4812361E0650091CBF3 /* KeepDate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +80,7 @@
 		7F1BB4832361E0650091CBF3 /* fsocietyxxx */ = {
 			isa = PBXGroup;
 			children = (
+				7F601428236894BA000351C8 /* Model */,
 				7F3D453223620177005E29A6 /* Storyboards */,
 				7F3D453123620167005E29A6 /* Extensions */,
 				7F3D45302362013A005E29A6 /* Cells */,
@@ -84,9 +97,14 @@
 		7F3D452F23620130005E29A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7F1BB4882361E0650091CBF3 /* ViewController.swift */,
-				7F3D452B2361FECD005E29A6 /* SelectViewController.swift */,
-				7F3D45292361FCC5005E29A6 /* MainTableViewController.swift */,
+				7F60142F236897AC000351C8 /* Settings */,
+				7F60142E23689791000351C8 /* Relationship Profile */,
+				7F60142B236895F0000351C8 /* TabBarController */,
+				7F60142123679111000351C8 /* Add a Significant Other */,
+				7F601420236790FE000351C8 /* Add a KeepDate */,
+				7F60141F23676603000351C8 /* Existing KeepDates */,
+				7F60141E236765F2000351C8 /* Main Screen UI */,
+				7F60141D236765E0000351C8 /* User Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +135,78 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		7F60141D236765E0000351C8 /* User Login */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BB4882361E0650091CBF3 /* ViewController.swift */,
+			);
+			path = "User Login";
+			sourceTree = "<group>";
+		};
+		7F60141E236765F2000351C8 /* Main Screen UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F3D452B2361FECD005E29A6 /* SelectViewController.swift */,
+			);
+			path = "Main Screen UI";
+			sourceTree = "<group>";
+		};
+		7F60141F23676603000351C8 /* Existing KeepDates */ = {
+			isa = PBXGroup;
+			children = (
+				7F3D45292361FCC5005E29A6 /* MainTableViewController.swift */,
+			);
+			path = "Existing KeepDates";
+			sourceTree = "<group>";
+		};
+		7F601420236790FE000351C8 /* Add a KeepDate */ = {
+			isa = PBXGroup;
+			children = (
+				7F6014222367913D000351C8 /* AddKeepDateController.swift */,
+			);
+			path = "Add a KeepDate";
+			sourceTree = "<group>";
+		};
+		7F60142123679111000351C8 /* Add a Significant Other */ = {
+			isa = PBXGroup;
+			children = (
+				7F6014242367916A000351C8 /* AddASignificantOtherController.swift */,
+			);
+			path = "Add a Significant Other";
+			sourceTree = "<group>";
+		};
+		7F601428236894BA000351C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F601429236894E8000351C8 /* MainViewCellDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F60142B236895F0000351C8 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				7F60142C23689602000351C8 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		7F60142E23689791000351C8 /* Relationship Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7F60142623688E0D000351C8 /* SignificantOtherProfileController.swift */,
+			);
+			path = "Relationship Profile";
+			sourceTree = "<group>";
+		};
+		7F60142F236897AC000351C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7F601430236897BB000351C8 /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,7 +224,7 @@
 			);
 			name = fsocietyxxx;
 			productName = fsocietyxxx;
-			productReference = 7F1BB4812361E0650091CBF3 /* projectOscarStar.app */;
+			productReference = 7F1BB4812361E0650091CBF3 /* KeepDate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,11 +280,17 @@
 			files = (
 				7F3D4534236201CE005E29A6 /* SelectViewControllerCell.swift in Sources */,
 				7F1BB4892361E0650091CBF3 /* ViewController.swift in Sources */,
+				7F6014232367913D000351C8 /* AddKeepDateController.swift in Sources */,
 				7F1BB4852361E0650091CBF3 /* AppDelegate.swift in Sources */,
+				7F60142723688E0D000351C8 /* SignificantOtherProfileController.swift in Sources */,
 				7F8E7CAF23623B3B00074EFE /* SlidingCells.swift in Sources */,
+				7F601431236897BB000351C8 /* SettingsController.swift in Sources */,
+				7F6014252367916A000351C8 /* AddASignificantOtherController.swift in Sources */,
 				7F3D452E236200F1005E29A6 /* SelectViewController+Extensions.swift in Sources */,
 				7F1BB48F2361E0650091CBF3 /* fsocietyxxx.xcdatamodeld in Sources */,
+				7F60142A236894E8000351C8 /* MainViewCellDetails.swift in Sources */,
 				7F3D452A2361FCC5005E29A6 /* MainTableViewController.swift in Sources */,
+				7F60142D23689602000351C8 /* TabBarController.swift in Sources */,
 				7F3D452C2361FECD005E29A6 /* SelectViewController.swift in Sources */,
 				7F1BB4872361E0650091CBF3 /* SceneDelegate.swift in Sources */,
 			);
@@ -348,7 +444,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.projectOscarStar;
-				PRODUCT_NAME = projectOscarStar;
+				PRODUCT_NAME = KeepDate;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.froomy.projectOscarStar;
-				PRODUCT_NAME = projectOscarStar;
+				PRODUCT_NAME = KeepDate;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

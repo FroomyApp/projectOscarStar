@@ -67,7 +67,8 @@ class ViewController: UIViewController {
     }
     
     @objc func enableContinue() {
-        let navigationController = UINavigationController(rootViewController: SelectViewController())
+//        let navigationController = UINavigationController(rootViewController: SelectViewController())
+        let navigationController = UINavigationController(rootViewController: TabViewController())
         navigationController.modalPresentationStyle = .fullScreen
         show(navigationController, sender: self)
 

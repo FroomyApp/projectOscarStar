@@ -11,7 +11,7 @@ import UIKit
 
 extension SelectViewController {
 
-    /// Sets up the collection view before its displayed.
+    // MARK: - setupCollectionView - Sets up the collection view before its displayed.
     func setupCollectionView() {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -34,7 +34,7 @@ extension SelectViewController {
     // MARK: - willDisplay
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let cells = details[indexPath.row]
-        if cells.cellType == .small {
+        if cells.cellType == .title {
         guard let cell = cell as? OptionCell else {
               return
           }
@@ -64,7 +64,7 @@ extension SelectViewController {
     // MARK: - cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cells = details[indexPath.row]
-        if cells.cellType == .small {
+        if cells.cellType == .title {
             guard let optionCell = collectionView.dequeueReusableCell(withReuseIdentifier: optionCellID, for: indexPath) as? OptionCell else {
                 print("cell could not be dequeued")
                 return OptionCell()
@@ -85,7 +85,7 @@ extension SelectViewController {
     // MARK: - sizeForItemAt
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cells = details[indexPath.row]
-        if cells.cellType == .small {
+        if cells.cellType == .title {
             return CGSize(width: view.frame.width - 16 - 16, height: 85)
         } else {
             return CGSize(width: view.frame.width - 16 - 16, height: 325)

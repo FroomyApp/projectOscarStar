@@ -51,10 +51,8 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     }
         
     public func createInterestsArray() {
-        details.append(CellDetails(detailName: "Next KeepDate", cellType: .big))
-        details.append(CellDetails(detailName: "View your existing KeepDates", cellType: .small))
-        details.append(CellDetails(detailName: "View your Saving List", cellType: .small))
+        details.append(CellDetails(detailName: "Next KeepDate", cellType: .upcomingKeepDate))
+        details.append(CellDetails(detailName: "View your existing KeepDates", cellType: .title))
+        details.append(CellDetails(detailName: "View your Saving List", cellType: .title))
     }
-    
-    //Add "Upcoming Dates" to big cell, with the sliding cell being stores.
 }
