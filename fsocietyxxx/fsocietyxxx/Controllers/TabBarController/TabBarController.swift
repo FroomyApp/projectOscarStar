@@ -17,18 +17,22 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         
         let mainUI = UINavigationController(rootViewController: SelectViewController())
-        mainUI.tabBarItem = UITabBarItem(title: "MainUI", image: UIImage(named: "news.png"), tag: 0)
+        mainUI.tabBarItem = UITabBarItem(title: "MainUI", image: UIImage(named: ""), tag: 0)
 
-        let existingKeepDates = UINavigationController(rootViewController: MainTableViewController())
-        existingKeepDates.tabBarItem = UITabBarItem(title: "KeepDates", image: UIImage(named: "matches.png"), tag: 1)
+        let keepDateContoller = ExistingKeepDatesTableViewController()
+        let existingKeepDates = UINavigationController(rootViewController: keepDateContoller)
+        existingKeepDates.tabBarItem = UITabBarItem(title: "KeepDates", image: UIImage(named: ""), tag: 1)
+        
+        let savingController = UINavigationController(rootViewController: SavingListController())
+        savingController.tabBarItem = UITabBarItem(title: "SavingList", image: UIImage(named: ""), tag: 2)
         
         let relationshipProfile = UINavigationController(rootViewController: SignificantOtherProfileController())
-        relationshipProfile.tabBarItem = UITabBarItem(title: "Relationship Profile", image: UIImage(named: ""), tag: 2)
+        relationshipProfile.tabBarItem = UITabBarItem(title: "Relationship Profile", image: UIImage(named: ""), tag: 3)
         
         let settingsController = UINavigationController(rootViewController: SettingsController())
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: ""), tag: 3)
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: ""), tag: 4)
 
-        let viewControllerList = [ mainUI, existingKeepDates, relationshipProfile, settingsController]
+        let viewControllerList = [ mainUI, existingKeepDates, savingController, relationshipProfile, settingsController]
         viewControllers = viewControllerList
     }
 

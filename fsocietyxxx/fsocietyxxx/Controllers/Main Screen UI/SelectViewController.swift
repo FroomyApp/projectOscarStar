@@ -20,8 +20,6 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     
     var collectionView: UICollectionView!
     
-    var contentView = UIView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -100,13 +100,11 @@ extension SelectViewController {
         case "Create new...":
             print("Create new tapped")
         case "View your existing KeepDates":
-            let tableController = MainTableViewController()
-            tableController.tableViewTitle = "KeepDates"
+            let tableController = ExistingKeepDatesTableViewController()
             let navigationController = UINavigationController(rootViewController: tableController)
             show(navigationController, sender: self)
         case "View your Saving List":
-            let tableController = MainTableViewController()
-            tableController.tableViewTitle = "Saving List"
+            let tableController = SavingListController()
             let navigationController = UINavigationController(rootViewController: tableController)
             show(navigationController, sender: self)
         default:

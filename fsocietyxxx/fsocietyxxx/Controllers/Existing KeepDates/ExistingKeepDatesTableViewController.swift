@@ -9,27 +9,25 @@
 import Foundation
 import UIKit
 
-class MainTableViewController: UITableViewController, UINavigationBarDelegate {
+class ExistingKeepDatesTableViewController: UITableViewController, UINavigationBarDelegate {
     
     /// The search controller for your To-Do's.
     let searchController = UISearchController(searchResultsController: nil)
-    
-    var tableViewTitle = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = tableViewTitle
+        navigationItem.title = "Existing KeepDates"
         setupSearchController()      
     }
     
     /// Sets up the search controller.
      func setupSearchController() {
 //         searchController.searchResultsUpdater = self
-         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search \(tableViewTitle)..."
-         navigationItem.searchController = searchController
-         definesPresentationContext = true
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Existing KeepDates..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
      }
     
 }
