@@ -12,6 +12,8 @@ import UIKit
 struct CellDetails {
     
     var detailName: String?
+    
+    var detailDate: String?
         
     var cellType: CellType
 }

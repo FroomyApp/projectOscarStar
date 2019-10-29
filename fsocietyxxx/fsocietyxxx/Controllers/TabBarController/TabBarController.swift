@@ -27,12 +27,15 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         savingController.tabBarItem = UITabBarItem(title: "SavingList", image: UIImage(named: ""), tag: 2)
         
         let relationshipProfile = UINavigationController(rootViewController: SignificantOtherProfileController())
-        relationshipProfile.tabBarItem = UITabBarItem(title: "Relationship Profile", image: UIImage(named: ""), tag: 3)
-        
-        let settingsController = UINavigationController(rootViewController: SettingsController())
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: ""), tag: 4)
+        relationshipProfile.tabBarItem = UITabBarItem(title: "Dating Profile", image: UIImage(named: ""), tag: 3)
+//        relationshipProfile.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 3)
 
-        let viewControllerList = [ mainUI, existingKeepDates, savingController, relationshipProfile, settingsController]
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingsViewController = storyBoard.instantiateViewController(withIdentifier: "GroupedTableView") as? SettingsController
+        let settingsNavController = UINavigationController(rootViewController: settingsViewController!)
+        settingsNavController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: ""), tag: 4)
+        
+        let viewControllerList = [mainUI, existingKeepDates, savingController, relationshipProfile, settingsNavController]
         viewControllers = viewControllerList
     }
 

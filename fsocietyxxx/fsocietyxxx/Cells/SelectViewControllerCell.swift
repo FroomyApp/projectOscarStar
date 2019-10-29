@@ -57,7 +57,7 @@ class ListCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         didSet {
             listTitleLabel.text = details?.detailName
             ideasTitleLabel.text = "Here's some ideas:"
-            upcomingKeepDateLabel.text = "October 31st: Anniversary"
+            upcomingKeepDateLabel.text = details?.detailDate
         }
     }
     

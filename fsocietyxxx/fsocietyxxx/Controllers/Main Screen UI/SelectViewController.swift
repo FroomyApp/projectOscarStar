@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class SelectViewController: UIViewController, UINavigationControllerDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UINavigationBarDelegate {
  
@@ -49,7 +50,8 @@ class SelectViewController: UIViewController, UINavigationControllerDelegate, UI
     }
         
     public func createInterestsArray() {
-        details.append(CellDetails(detailName: "Next KeepDate", cellType: .upcomingKeepDate))
+        details.append(CellDetails(detailName: "Next KeepDate", detailDate: "October 31st: Anniversary", cellType: .upcomingKeepDate))
+        details.append(CellDetails(detailName: "Upcoming KeepDate", detailDate: "December 25th: Christmas", cellType: .upcomingKeepDate))
         details.append(CellDetails(detailName: "View your existing KeepDates", cellType: .title))
         details.append(CellDetails(detailName: "View your Saving List", cellType: .title))
     }

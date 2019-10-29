@@ -15,6 +15,7 @@ class SignificantOtherProfileController: UIViewController {
         super.viewDidLoad()
          
         view.backgroundColor = UIColor.systemBackground
+        navigationItem.title = "Relationship Profile"
         
     }
     
